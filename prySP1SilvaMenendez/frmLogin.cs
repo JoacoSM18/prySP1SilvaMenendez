@@ -16,6 +16,7 @@ namespace prySP1SilvaMenendez
         int intentos = 0;
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+           
             if ((txtNombre.Text == "Administrador" &&
                 txtContraseña.Text == "adm135$") ||
                 (txtNombre.Text == "Operador" &&

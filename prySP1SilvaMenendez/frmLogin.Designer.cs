@@ -66,7 +66,7 @@
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(120, 50);
             btnAceptar.TabIndex = 2;
-            btnAceptar.Text = "Aceptar";
+            btnAceptar.Text = "&Aceptar";
             btnAceptar.TextAlign = ContentAlignment.TopCenter;
             btnAceptar.UseVisualStyleBackColor = true;
             btnAceptar.Click += btnAceptar_Click;
@@ -79,13 +79,14 @@
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(120, 48);
             btnCancelar.TabIndex = 3;
-            btnCancelar.Text = "Cancelar";
+            btnCancelar.Text = "&Cancelar";
             btnCancelar.TextAlign = ContentAlignment.TopCenter;
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // txtNombre
             // 
+            txtNombre.Cursor = Cursors.IBeam;
             txtNombre.Location = new Point(203, 100);
             txtNombre.Margin = new Padding(4, 5, 4, 5);
             txtNombre.Name = "txtNombre";
@@ -97,8 +98,9 @@
             txtContraseña.Cursor = Cursors.IBeam;
             txtContraseña.Location = new Point(203, 187);
             txtContraseña.Margin = new Padding(4, 5, 4, 5);
-            txtContraseña.MaxLength = 30;
+            txtContraseña.MaxLength = 20;
             txtContraseña.Name = "txtContraseña";
+            txtContraseña.PasswordChar = '*';
             txtContraseña.Size = new Size(183, 31);
             txtContraseña.TabIndex = 5;
             txtContraseña.TextChanged += txtContraseña_TextChanged;

@@ -19,12 +19,17 @@ namespace prySilvaMenendezSP1
 
         private void frmInicio_Load(object sender, EventArgs e)
         {
-
+        
         }
 
         private void lblBienvenida_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAceptar2_Click(object sender, EventArgs e)
+        {
+            this.Close(); // cierra el formulario
         }
     }
 }
