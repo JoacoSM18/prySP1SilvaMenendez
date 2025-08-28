@@ -28,37 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lblBienvenida = new Label();
             btnAceptar = new Button();
             SuspendLayout();
             // 
-            // label1
+            // lblBienvenida
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20F);
-            label1.Location = new Point(86, 48);
-            label1.Name = "label1";
-            label1.Size = new Size(318, 37);
-            label1.TabIndex = 0;
-            label1.Text = "BIENVENIDO AL SISTEMA";
+            lblBienvenida.AutoSize = true;
+            lblBienvenida.Font = new Font("Segoe UI", 20F);
+            lblBienvenida.Location = new Point(123, 80);
+            lblBienvenida.Margin = new Padding(4, 0, 4, 0);
+            lblBienvenida.Name = "lblBienvenida";
+            lblBienvenida.Size = new Size(474, 54);
+            lblBienvenida.TabIndex = 0;
+            lblBienvenida.Text = "BIENVENIDO AL SISTEMA";
+            lblBienvenida.Click += lblBienvenida_Click;
             // 
             // btnAceptar
             // 
             btnAceptar.Font = new Font("Segoe UI", 11F);
-            btnAceptar.Location = new Point(190, 117);
+            btnAceptar.Location = new Point(271, 195);
+            btnAceptar.Margin = new Padding(4, 5, 4, 5);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(89, 28);
+            btnAceptar.Size = new Size(127, 47);
             btnAceptar.TabIndex = 1;
             btnAceptar.Text = "ACEPTAR";
             btnAceptar.UseVisualStyleBackColor = true;
             // 
             // frmInicio
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(479, 242);
+            ClientSize = new Size(684, 403);
             Controls.Add(btnAceptar);
-            Controls.Add(label1);
+            Controls.Add(lblBienvenida);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "frmInicio";
             Text = "INICIO";
             Load += frmInicio_Load;
@@ -68,7 +72,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label lblBienvenida;
         private Button btnAceptar;
     }
 }

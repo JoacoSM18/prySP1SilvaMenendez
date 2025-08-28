@@ -21,5 +21,10 @@ namespace prySilvaMenendezSP1
         {
 
         }
+
+        private void lblBienvenida_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

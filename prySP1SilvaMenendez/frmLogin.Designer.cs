@@ -40,9 +40,10 @@
             // 
             lblUsuario.AutoSize = true;
             lblUsuario.Font = new Font("Cascadia Code", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblUsuario.Location = new Point(51, 66);
+            lblUsuario.Location = new Point(73, 110);
+            lblUsuario.Margin = new Padding(4, 0, 4, 0);
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(64, 17);
+            lblUsuario.Size = new Size(96, 27);
             lblUsuario.TabIndex = 0;
             lblUsuario.Text = "Usuario";
             // 
@@ -50,18 +51,20 @@
             // 
             lblContraseña.AutoSize = true;
             lblContraseña.Font = new Font("Cascadia Code", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblContraseña.Location = new Point(36, 118);
+            lblContraseña.Location = new Point(51, 197);
+            lblContraseña.Margin = new Padding(4, 0, 4, 0);
             lblContraseña.Name = "lblContraseña";
-            lblContraseña.Size = new Size(88, 17);
+            lblContraseña.Size = new Size(132, 27);
             lblContraseña.TabIndex = 1;
             lblContraseña.Text = "Contraseña";
             // 
             // btnAceptar
             // 
             btnAceptar.Font = new Font("Cascadia Code", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAceptar.Location = new Point(303, 62);
+            btnAceptar.Location = new Point(433, 103);
+            btnAceptar.Margin = new Padding(4, 5, 4, 5);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(84, 30);
+            btnAceptar.Size = new Size(120, 50);
             btnAceptar.TabIndex = 2;
             btnAceptar.Text = "Aceptar";
             btnAceptar.TextAlign = ContentAlignment.TopCenter;
@@ -71,42 +74,50 @@
             // btnCancelar
             // 
             btnCancelar.Font = new Font("Cascadia Code", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCancelar.Location = new Point(303, 107);
+            btnCancelar.Location = new Point(433, 178);
+            btnCancelar.Margin = new Padding(4, 5, 4, 5);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(84, 29);
+            btnCancelar.Size = new Size(120, 48);
             btnCancelar.TabIndex = 3;
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextAlign = ContentAlignment.TopCenter;
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(142, 60);
+            txtNombre.Location = new Point(203, 100);
+            txtNombre.Margin = new Padding(4, 5, 4, 5);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(129, 23);
+            txtNombre.Size = new Size(183, 31);
             txtNombre.TabIndex = 4;
             // 
             // txtContraseña
             // 
-            txtContraseña.Location = new Point(142, 112);
+            txtContraseña.Cursor = Cursors.IBeam;
+            txtContraseña.Location = new Point(203, 187);
+            txtContraseña.Margin = new Padding(4, 5, 4, 5);
+            txtContraseña.MaxLength = 30;
             txtContraseña.Name = "txtContraseña";
-            txtContraseña.Size = new Size(129, 23);
+            txtContraseña.Size = new Size(183, 31);
             txtContraseña.TabIndex = 5;
             txtContraseña.TextChanged += txtContraseña_TextChanged;
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(428, 220);
+            ClientSize = new Size(611, 367);
             Controls.Add(txtContraseña);
             Controls.Add(txtNombre);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(lblContraseña);
             Controls.Add(lblUsuario);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "frmLogin";
             Text = "LOGIN";
+            Load += frmLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
