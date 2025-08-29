@@ -7,12 +7,11 @@ namespace prySP1SilvaMenendez
         public frmLogin()
         {
             InitializeComponent();
-            txtNombre.Focus();
         }
 
         private void txtContraseña_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
         int intentos = 0;
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -45,7 +44,7 @@ namespace prySP1SilvaMenendez
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
