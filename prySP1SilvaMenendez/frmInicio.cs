@@ -1,4 +1,5 @@
-﻿using System;
+﻿using prySP1SilvaMenendez;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +30,9 @@ namespace prySilvaMenendezSP1
 
         private void btnAceptar2_Click(object sender, EventArgs e)
         {
-            this.Close(); // cierra el formulario
+            frmLogin loginForm = new frmLogin();
+            loginForm.Show();
+            this.Hide();
         }
     }
 }

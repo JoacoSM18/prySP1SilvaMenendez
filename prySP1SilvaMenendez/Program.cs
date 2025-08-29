@@ -1,3 +1,5 @@
+using prySilvaMenendezSP1;
+
 namespace prySP1SilvaMenendez
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace prySP1SilvaMenendez
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmLogin());
+            Application.Run(new frmInicio());
         }
     }
 }

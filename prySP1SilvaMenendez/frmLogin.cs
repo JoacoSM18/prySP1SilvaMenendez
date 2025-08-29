@@ -7,6 +7,7 @@ namespace prySP1SilvaMenendez
         public frmLogin()
         {
             InitializeComponent();
+            txtNombre.Focus();
         }
 
         private void txtContraseña_TextChanged(object sender, EventArgs e)
@@ -16,24 +17,23 @@ namespace prySP1SilvaMenendez
         int intentos = 0;
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-           
+
             if ((txtNombre.Text == "Administrador" &&
                 txtContraseña.Text == "adm135$") ||
                 (txtNombre.Text == "Operador" &&
                 txtContraseña.Text == "ope246$"))
 
             {
-                this.Hide(); // oculta este formualrio
-                frmInicio f = new frmInicio(); // crea el frmInicio
-                f.Text = txtNombre.Text; // asigna el texto de título
-                f.ShowDialog(); // visualiza y ejecuta el frmInicio
-                this.Show(); // visualiza nuevamente este formulario
+                this.Hide();
+                this.Close();
+                MessageBox.Show("Login Correcto");
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Datos incorrectos. Acceso Denegado.");
-                intentos++; // incrementa el contador de intentos fallidos
-                if (intentos == 3) // si es 3 se cierra el formulario
+                MessageBox.Show("Datos Incorrectos. Acceso Denegado.");
+                intentos++;
+                if (intentos == 3)
                 {
                     this.Close();
                 }
@@ -51,8 +51,15 @@ namespace prySP1SilvaMenendez
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             {
-               this.Close(); // cierra el formulario
+                this.Hide();
+                Application.OpenForms["frmInicio"].Show();
             }
         }
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }

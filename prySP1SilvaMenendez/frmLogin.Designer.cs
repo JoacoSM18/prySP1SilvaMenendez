@@ -67,7 +67,6 @@
             btnAceptar.Size = new Size(120, 50);
             btnAceptar.TabIndex = 2;
             btnAceptar.Text = "&Aceptar";
-            btnAceptar.TextAlign = ContentAlignment.TopCenter;
             btnAceptar.UseVisualStyleBackColor = true;
             btnAceptar.Click += btnAceptar_Click;
             // 
@@ -80,7 +79,6 @@
             btnCancelar.Size = new Size(120, 48);
             btnCancelar.TabIndex = 3;
             btnCancelar.Text = "&Cancelar";
-            btnCancelar.TextAlign = ContentAlignment.TopCenter;
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
@@ -109,6 +107,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(611, 367);
             Controls.Add(txtContraseña);
             Controls.Add(txtNombre);
@@ -118,7 +117,9 @@
             Controls.Add(lblUsuario);
             Margin = new Padding(4, 5, 4, 5);
             Name = "frmLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LOGIN";
+            FormClosed += frmLogin_FormClosed;
             Load += frmLogin_Load;
             ResumeLayout(false);
             PerformLayout();
